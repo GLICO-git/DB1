@@ -23,13 +23,13 @@
  1. [Sample University Database](#Sample-University-Database)
 	- [Running Example(University)](#Running-Example(University))
 	- [Schema Diagram](#Schema-Diagram)
-		- ["department" Relation](#"department"-Relation)
-		- ["course" Relation](#"course"-Relation)
-		- ["professor" Relation](#"professor"-Relation)
-		- ["teaches" Relation](#"teaches"-Relation)
-		- ["student" Relation](#"student"-Relation)
-		- ["takes" Relation](#"takes"-Relation)
-		- ["room" Relation](#"room"-Relation)
+		- ["department" Relation](#department-Relation)
+		- ["course" Relation](#course-Relation)
+		- ["professor" Relation](#professor-Relation)
+		- ["teaches" Relation](#teaches-Relation)
+		- ["student" Relation](#student-Relation)
+		- ["takes" Relation](#takes-Relation)
+		- ["room" Relation](#room-Relation)
 
 ***
 # Relational Data Model
