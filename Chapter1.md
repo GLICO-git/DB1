@@ -1,4 +1,4 @@
-# 1장
+# 1장 서론
 ## Subtopics
  1. Databases
  1. Data Abstraction and Data Model
@@ -48,7 +48,7 @@
 - 논리적(Logical) 레벨 : 저장되어 있는 데이터들과 그 관계성을 설명하는 것
 - 뷰(View) 레벨 : 특정 사용자에게 관심있는 부분만 설명하는 것<br>
 
-![three level abstraction](/img/Three_Level_Abstraction.jpeg)
+![three level abstraction](/img/Chapter1/Three_Level_Abstraction.jpeg)
 - physical level 밑에 Data가 있다고 보면 됨
 ***
 # Data Independence
@@ -66,7 +66,7 @@
     - XML 등등...
 ***
 # 관계형 모델
-![relationModel](/img/Relation_exam.jpeg)
+![relationModel](/img/Chapter1/Relation_exam.jpeg)
 - 가장 일반적인 모델
 ***
 # 객체관계형 모델
@@ -108,7 +108,7 @@ where teaches.cID=course.cID and pID='22222';
     - Query Processor
     - Storage Manager
 
-![simplified DB System](/img/simple_db_sys.jpeg)
+![simplified DB System](/img/Chapter1/simple_db_sys.jpeg)
 
 ***
 # Data dictionary
