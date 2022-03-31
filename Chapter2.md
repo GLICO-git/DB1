@@ -97,7 +97,7 @@ D1 x D2 x ... Dn
 `엔티티 제약`(주 키는 널 값을 가지지 못하는 제약),<br>`참조 무결성 제약` 등이 있다.
 ***
 ## Sample University Database
-<p align = "center"><img src = "./img/Chapter2/univDB.jpg" width = "60%"/></p>
+<p align = "center"><img src = "./img/Chapter2/univDB.JPG" width = "60%"/></p>
 <p align = "center">대학 데이터베이스 예제</p>
 
 - 위 그림은 관계형 데이터베이스의 예제를 보인다
@@ -149,7 +149,7 @@ Primarykey
 - `참조 무결성 제약(Referential Integrity Constraint)`는 관계형 데이터 모델에만 존재하는 제약이다
 - 간단하게 말하면, `참조 무결성 제약`은 특정 속성에 나타나는 모든 값은 반드시 다른 속성에도 나타나야 한다는 것이다
 ## Why Referential Integrity Constraint?
-<p align = "center"><img src = "./img/Chapter2/constraint.jpg" width = "60%"/></p>
+<p align = "center"><img src = "./img/Chapter2/constraint.JPG" width = "60%"/></p>
 <p align = "center">참조 무결성 예제</p>
 
 - 위 그림과 같이 두 테이블이 있으며, `student`테이블에서 `Lee`학생의 `major`속성 값은 2이며,<br>
@@ -169,14 +169,99 @@ Primarykey
 이는 참조 무결성 제약과 관련 없이 허용되는 현상이다
 ***
 # Sample University Database
+## Running Example(University)
+> department(<u>deptName</u>, chairman, building, budget)
+<br>professor(<u>pID</u>, name, deptName, salary)
+<br>student(<u>sID</u>, name, gender, deptName, GPA, totalCredit)
+<br>course(<u>cID</u>, title, deptName, credit)
+<br>teaches(<u>pID, cID, semester, year</u>, grade)
+<br>takes(<u>sID, cID, semester, year</u>, grade)
+<br>room(<u>roomID</u>, building, capacity)
 
-## Running-Example(University))
-## Schema-Diagram)
-### "department"-Relation)
-### "course"-Relation)
-### "professor"-Relation)
-### "teaches"-Relation)
-### "student"-Relation)
-### "takes"-Relation)
-### "room"-Relation)
+- 본 예제는 총 7개의 테이블로 구성되어 있으며, 밑줄이 있는 속성 집합은<br>
+해당 테이블의 주 키를 표시한다
+- 또한 다수의 참조 무결성 제약이 존재한다
+***
+## Schema Diagram
+<p align = "center"><img src = "./img/Chapter2/univDB.JPG" width = "60%"/></p>
+<p align = "center">스키마 다이어그램</p>
+
+- 위 그림은 대학교 데이터베이스를 스키마 다이어그램으로 표시한 것이다
+- 각 테이블에 대한 인스턴스는 다음과 같다
+***
+### "department" Relation
+deptName|chairman|building|budget
+:---:|:---:|:---:|:---:
+CS|10|IT building|67000
+EE|21|IT building|82500
+Media|32|IT building|55500
+***
+### "course" Relation
+cID|title|deptName|credit
+:---:|:---:|:---:|:---:
+202|Java|CS|2
+203|Data Structure|CS|3
+301|Databases|CS|3
+241|Logic Circuit|EE|2
+341|LAN|EE|3
+342|Signal Processing|EE|3
+222|Computer Art|Media|3
+223|Game Theroy|Media|3
+
+***
+### "professor" Relation
+pID|name|deptName|salary
+:---:|:---:|:---:|:---:
+10|Lee|CS|8000
+11|Choi|CS|7000
+13|Yoon|CS|6000
+21|Yang|EE|7000
+22|Park|EE|6000
+31|Han|Media|9000
+32|Paik|Media|6000
+
+***
+### "teaches" Relation
+pID|cID|semester|year|classroom
+:---:|:---:|:---:|:---:|:---:
+11|202|Fall|2014|1
+11|203|Fall|2014|2
+13|203|Spring|2015|2
+21|341|Fall|2014|3
+22|341|Spring|2015|2
+22|241|Fall|2013|2
+31|222|Fall|2014|5
+32|223|Spring|2014|4
+***
+### "student" Relation
+sID|name|gender|deptName|GPA|totalCredit
+:---:|:---:|:---:|:---:|:---:|:---:
+1022|Eric|M|CS|3.54|15
+1011|Julia|F|CS|3.89|103
+1012|John|M|CS|4.13|38
+2015|Alma|F|EE|2.57|18
+2014|Bob|M|EE|3.75|82
+3010|Adam|M|Media|3.90|19
+3011|Joanna|F|Media|1.80|58
+***
+### "takes" Relation
+sID|cID|semester|year|grade
+:---:|:---:|:---:|:---:|:---:|
+1022|202|Fall|2013|A+
+1022|203|Spring|2014|A0
+1022|301|Fall|2014|B+
+1011|202|Fall|2013|B-
+3010|203|Spring|2014|A+
+3010|222|Fall|2013|B+
+3010|223|Spring|2014|C0
+3011|222|Fall|2013|A+
+***
+### "room" Relation
+roomID|building|capacity
+:---:|:---:|:---:|
+1|IT building|40
+2|IT building|50
+3|IT building|30
+4|Vision Hall|60
+5|Vision Hall|50
 ***
