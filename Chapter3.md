@@ -23,15 +23,18 @@
 
 # Relational Algebra
 
->  Six basic operators
+  Six basic operators
 
-> - select : 
- $\sigma$
-> - project : $\Pi$
-> - union : $\cup$
-> - set difference : -
-> - Cartesian product : x
-> - rename : $\rho$
+ - `select` : 
+$\sigma$
+ - `project` : 
+ $\Pi$
+ - `union` : 
+ $\cup$
+ - `set difference` : -
+- `Cartesian product` : x
+ - `rename` : 
+ $\rho$
 ***
 - 관계 대수는 관계에 대한 다수 개의 연산을 제공하며, 사용자는 이를 이용하여 <br>
 DB로부터 구하고자 하는 정보를 DB System에 요청(또는 표현)할 수 있다
@@ -44,7 +47,9 @@ DB로부터 구하고자 하는 정보를 DB System에 요청(또는 표현)할 
 <br>-> 그 대신 SQL 언어를 사용자에게 지원한다
 ***
 # Select Operation
-- 선택(select) 연산의 기호는 $\sigma$(sigma)이며, p는 선택 조건(selection predicate)을 의미한다<br>
+- `선택(select)` 연산의 기호는 
+$\sigma$
+(sigma)이며, p는 선택 조건(selection predicate)을 의미한다<br>
 - 선택 조건 p는 명제논리(propositional logic) 표현이며,
 - 각각의 항(term)은 $\land$(and), $\lor$(or),$\lnot$(not)으로 연결이 가능하다
 
