@@ -37,3 +37,20 @@ Chapter1 : 1장
 		- ["takes" Relation](#"takes"-Relation)
 		- ["room" Relation](#"room"-Relation)
 </div></details>
+<details><summary>
+Chapter3 : 관계형 데이터 모델(2)
+</summary><div markdown="1">
+
+ 1. [Relational Algebra](#Relational-Algebra) 
+	- [Select Operation](#Select-Operation)
+		- [Select Operation Example](#Select-Operation-Example)
+	- [Project Operation](#Project-Operation)
+		- [Project Operation Example](#Project-Operation-Example)
+	- [Union Operation](#Union-Operation)
+		- [Union Operation Example](#Union-Operation-Example)
+	- [Set Difference Operation](#Set-Difference-Operation-Example)
+	- [Cartesian Product Operation](#Cartesian-Product-Operation)
+		- [Cartesian Product Operation Example](#Cartesian-Product-Operation-Example)
+	- [Rename Operation](#Rename-Operation)
+	- [Relational Algebra Expressions](#Relational-Algebra-Expressions)
+</div></details>
