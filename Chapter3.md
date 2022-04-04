@@ -25,7 +25,8 @@
 
 >  Six basic operators
 
-> - select : $\sigma$
+> - select : 
+ $\sigma$
 > - project : $\Pi$
 > - union : $\cup$
 > - set difference : -
